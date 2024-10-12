@@ -1,0 +1,5 @@
+components = ["*"]
+require = ["ts-node/register"]
+
+[paths.environment]
+component = "components/#{component}/#{environment}"
