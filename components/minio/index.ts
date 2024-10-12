@@ -168,6 +168,19 @@ function deployment(config: DeploymentConfig) {
                   mountPath: '/data',
                 },
               ],
+              lifecycle: {
+                postStart: {
+                  exec: {
+                    command: [
+                      '/bin/sh',
+                      '-c',
+                      // TODO: should make root and added user's username and password configurable,
+                      // and needs to set policy to added user
+                      'sleep 3 && mc alias set local http://localhost:9000 minioadmin minioadmin && mc admin user add local localminio localminio',
+                    ],
+                  },
+                },
+              },
             },
           ],
           volumes: [
