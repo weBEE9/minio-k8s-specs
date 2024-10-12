@@ -10,11 +10,11 @@ const localMinioEnvironment: MinioEnvironment = {
   ],
   resources: {
     requests: {
-      cpu: '100m',
+      cpu: '1000m',
       memory: '512Mi',
     },
     limits: {
-      cpu: '250m',
+      cpu: '2000m',
       memory: '1Gi',
     },
   },
