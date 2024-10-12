@@ -141,6 +141,15 @@ function deployment(config: DeploymentConfig) {
                   name: 'MINIO_BROWSER_LOGIN_ANIMATION',
                   value: 'off',
                 },
+                // Uncomment the following lines to set the root username and password
+                // {
+                //   name: 'MINIO_ROOT_USER',
+                //   value: '<your_username>',
+                // },
+                // {
+                //   name: 'MINIO_ROOT_PASSWORD',
+                //   value: '<your_password>',
+                // },
               ],
               command: [
                 'minio',
